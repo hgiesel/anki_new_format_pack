@@ -6,7 +6,10 @@ rm -rf "$DIR/dist/*"
 #   pyuic5 "$filename" > "$DIR/gui/forms/$(basename ${filename%.*})_ui.py"
 # done
 
-cp -rf "$DIR/__init__.py" "$DIR/src" "$DIR/dist"
+cp -rf "$DIR/__init__.py" \
+  "$DIR/src" \
+  "$DIR/manifest.json" \
+  "$DIR/dist"
 
 yarn --cwd "$DIR/web" build
 
