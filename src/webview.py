@@ -7,7 +7,7 @@ mw.addonManager.setWebExports(__name__, r"(web|icons)/.*\.(js|css|png)")
 
 
 def load_package(webcontent, context):
-    if isinstance(context, Editor) and context.addMode:
+    if isinstance(context, Editor):
         addon_package = context.mw.addonManager.addonFromModule(__name__)
         base_path = f"/_addons/{addon_package}/web"
 

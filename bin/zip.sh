@@ -9,8 +9,8 @@ else
   declare addon_id='new_format_pack'
 fi
 
-cd "$DIR"
-
 "$DIR/bin/compile.sh"
 
-zip -r "$DIR/build/$addon_id.ankiaddon" "$DIR/dist/"*
+cd "$DIR/dist"
+
+zip -r "$DIR/build/$addon_id.ankiaddon" *
