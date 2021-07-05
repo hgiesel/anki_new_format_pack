@@ -6,11 +6,11 @@ if [[ "$1" =~ ^-?a$ ]]; then
   declare addon_id=''
 else
   # for installing myself
-  declare addon_id='ze_frozen_fields'
+  declare addon_id='new_format_pack'
 fi
 
 cd "$DIR"
 
 "$DIR/bin/compile.sh"
 
-zip -r "$DIR/build/$addon_id.ankiaddon" "$DIR/dist/*"
+zip -r "$DIR/build/$addon_id.ankiaddon" "$DIR/dist/"*
