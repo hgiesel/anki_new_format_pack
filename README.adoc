@@ -1,1 +1,8 @@
-# Ze Frozen Fields for Anki
+# New Format Pack for Anki
+
+Adds four buttons:
+
+- Strike-through text
+- Horizontal ruler
+- Code block
+- Paragraph
