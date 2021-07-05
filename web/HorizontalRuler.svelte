@@ -12,6 +12,7 @@
     <WithContext key={contextKeys.inCodableKey} let:context={inCodable}>
         <IconButton
             disabled={!fieldFocused || inCodable}
+            tooltip="Horizontal ruler"
             on:click={() => document.execCommand(key)}
         >
             <!-- Bootstrap hr icon -->

@@ -7,5 +7,5 @@ $editorToolbar.then((editorToolbar) => {
     editorToolbar.formatInlineButtons.appendButton({ component: StrikeThrough }, 2)
     editorToolbar.formatBlockButtons.appendButton({ component: Paragraph })
     editorToolbar.formatBlockButtons.appendButton({ component: HorizontalRuler })
-    // editorToolbar.formatBlockButtons.appendButton({ component: CodeBlock }, -1)
+    editorToolbar.formatBlockButtons.appendButton({ component: CodeBlock })
 });

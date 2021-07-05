@@ -10,6 +10,7 @@
     <WithContext key={contextKeys.inCodableKey} let:context={inCodable}>
         <IconButton
             disabled={!fieldFocused || inCodable}
+            tooltip="Code block"
             on:click={() => document.execCommand("formatBlock", false, "pre")}
         >
             <!-- Bootstrap braces icon -->
