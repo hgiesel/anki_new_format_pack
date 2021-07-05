@@ -69,10 +69,7 @@
                         toggleParagraph();
                         updateState(event);
                     }}
-                    on:mount={(event) => {
-                        console.log('yo', event);
-                        createShortcut(event);
-                    }}
+                    on:mount={createShortcut}
                 >
                     <!-- paragraph Bootstrap icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paragraph" viewBox="0 0 16 16">
