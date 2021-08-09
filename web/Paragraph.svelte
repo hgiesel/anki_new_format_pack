@@ -12,11 +12,13 @@
     }
 
     const getAnchorParent = (predicate) => (currentField) => {
-        const anchor = currentField.getSelection()?.anchorNode;
+        const selection = currentField.getSelection();
 
-        if (!anchor) {
+        if (!selection || !selection.anchor) {
             return null;
         }
+
+        const anchor = selection.anchor;
 
         let anchorParent = null;
         let element = nodeIsElement(anchor) ? anchor : anchor.parentElement;
