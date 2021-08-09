@@ -15,7 +15,7 @@ esbuild
     entryPoints: ["./editor.js"],
     outdir: "../dist/web",
     format: "esm",
-    minify: false,
+    minify: false /* do not set this to true */,
     bundle: true,
     splitting: false,
     plugins: [sveltePlugin()],
