@@ -1,7 +1,7 @@
 {
   "main": "build.js",
   "scripts": {
-      "build": "node build.js"
+    "build": "node build.js"
   },
   "dependencies": {
     "esbuild": "^0.12.14",

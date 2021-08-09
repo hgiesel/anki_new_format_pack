@@ -3,18 +3,18 @@
 
 
 esbuild-svelte@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/esbuild-svelte/-/esbuild-svelte-0.5.3.tgz#0aff02ff478b4b254bdd5d00e0b7f07648021559"
-  integrity sha512-KByKD/yt8QaqKjLu32MG3MXBExJYlDM0QwzW3pzKLJR4eev0923DrUKRHPBBjB+OVirUtZnEJE/qitjdW/WyAw==
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/esbuild-svelte/-/esbuild-svelte-0.5.4.tgz#8afc4445c89ed1183aa401fd09f0edbe729c6a64"
+  integrity sha512-7QgDYfnRW8U/oMo/eaVXr0Ptm/LRugziXMRvg3RGA2MB7dWyc/gYEdf2KThkHeYFFTFAmY7Ujg32gKrmHQE3qw==
   dependencies:
-    svelte "^3.38.3"
+    svelte "^3.42.1"
 
 esbuild@^0.12.14:
-  version "0.12.14"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.14.tgz#43157dbd0b36d939247d4eb4909a4886ac40f82e"
-  integrity sha512-z8p+6FGiplR7a3pPonXREbm+8IeXjBGvDpVidZmGB/AJMsJSfGCU+n7KOMCazA9AwvagadRWBhiKorC0w9WJvw==
+  version "0.12.19"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.19.tgz#ab849766705a5093df5acd8ec2f6ba2159a38a6c"
+  integrity sha512-5NuT1G6THW7l3fsSCDkcPepn24R0XtyPjKoqKHD8LfhqMXzCdz0mrS9HgO6hIhzVT7zt0T+JGbzCqF5AH8hS9w==
 
-svelte@^3.38.3:
-  version "3.38.3"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.38.3.tgz#e15a1da98ee4b10162a6c8cb4c80aa86b2b589ed"
-  integrity sha512-N7bBZJH0iF24wsalFZF+fVYMUOigaAUQMIcEKHO3jstK/iL8VmP9xE+P0/a76+FkNcWt+TDv2Gx1taUoUscrvw==
+svelte@^3.38.3, svelte@^3.42.1:
+  version "3.42.1"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.42.1.tgz#d4b4d9068cce911835f7c6b8ff1d290e1a0b5657"
+  integrity sha512-XtExLd2JAU3T7M2g/DkO3UNj/3n1WdTXrfL63OZ5nZq7nAqd9wQw+lR4Pv/wkVbrWbAIPfLDX47UjFdmnY+YtQ==
