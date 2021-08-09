@@ -3,7 +3,7 @@
         IconButton,
         WithContext,
         WithState,
-        /* WithShortcut, */
+        WithShortcut,
         contextKeys,
     } = components;
 
@@ -56,7 +56,7 @@
 
 <WithContext key={contextKeys.fieldFocusedKey} let:context={fieldFocused}>
     <WithContext key={contextKeys.inCodableKey} let:context={inCodable}>
-        <!-- <WithShortcut shortcut="Control+P" let:createShortcut let:shortcutLabel> -->
+        <WithShortcut shortcut="Control+P" let:createShortcut let:shortcutLabel>
             <WithState
                 {key}
                 update={checkForParagraph}
@@ -66,11 +66,12 @@
                 <IconButton
                     disabled={!fieldFocused || inCodable}
                     {active}
-                    tooltip={`Paragraph`}
+                    tooltip="Paragraph {shortcutLabel}"
                     on:click={(event) => {
                         toggleParagraph();
                         updateState(event);
                     }}
+                    on:mount={(event) => createShortcut(event.detail.button)}
                 >
                     <!-- paragraph Bootstrap icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paragraph" viewBox="0 0 16 16">
@@ -78,6 +79,6 @@
                     </svg>
                 </IconButton>
             </WithState>
-        <!-- </WithShortcut> -->
+        </WithShortcut>
     </WithContext>
 </WithContext>
