@@ -14,16 +14,16 @@ const icon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fil
 export const strikeThrough = onlyEditable((disabled) =>
   withShortcut({
     shortcut: "Control+Shift+S",
-    getComponent: (createShortcut, shortcutLabel) =>
+    getComponent: ({ createShortcut, shortcutLabel }) =>
       withState({
         key,
         update: () => document.queryCommandState(key),
-        getComponent: (state, updateState) =>
+        getComponent: ({ state: active, updateState }) =>
           slottedHtml({
             slotted: icon,
             component: iconButton({
               disabled,
-              active: state,
+              active,
               tooltip: `Strike-through text ${shortcutLabel}`,
               onClick: (event) => {
                 document.execCommand(key);

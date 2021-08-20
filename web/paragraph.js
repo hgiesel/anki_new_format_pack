@@ -57,16 +57,16 @@ const icon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fil
 export const paragraph = onlyEditable((disabled) =>
   withShortcut({
     shortcut: "Control+P",
-    getComponent: (createShortcut, shortcutLabel) =>
+    getComponent: ({ createShortcut, shortcutLabel }) =>
       withState({
         key,
         update: checkForParagraph,
-        getComponent: (state, updateState) =>
+        getComponent: ({ state: active, updateState }) =>
           slottedHtml({
             slotted: icon,
             component: iconButton({
               disabled,
-              active: state,
+              active,
               tooltip: `Paragraph ${shortcutLabel}`,
               onClick: (event) => {
                 toggleParagraph();

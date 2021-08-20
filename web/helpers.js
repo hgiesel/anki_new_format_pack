@@ -11,10 +11,11 @@ export const { fieldFocusedKey, inCodableKey } = components.contextKeys;
 export function onlyEditable(dynamic) {
   return withContext({
     key: fieldFocusedKey,
-    getComponent: (fieldFocused) =>
+    getComponent: ({ context: fieldFocused }) =>
       withContext({
         key: inCodableKey,
-        getComponent: (inCodable) => dynamic(!fieldFocused || inCodable),
+        getComponent: ({ context: inCodable }) =>
+          dynamic(!fieldFocused || inCodable),
       }),
   });
 }
