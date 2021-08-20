@@ -18,9 +18,7 @@ esbuild
     minify: false /* do not set this to true */,
     bundle: true,
     splitting: false,
-    plugins: [
-        sveltePlugin(),
-    ],
+    plugins: [sveltePlugin()],
   })
   .catch((err) => {
     console.error(err);
