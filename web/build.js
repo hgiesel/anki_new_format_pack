@@ -1,7 +1,6 @@
 const fs = require("fs");
 const esbuild = require("esbuild");
 const sveltePlugin = require("esbuild-svelte");
-const crossUnit = require("svelte-cross-unit");
 
 if (!fs.existsSync("../dist")) {
   fs.mkdirSync("../dist");
@@ -21,7 +20,6 @@ esbuild
     splitting: false,
     plugins: [
         sveltePlugin(),
-        crossUnit.esbuildPlugin()
     ],
   })
   .catch((err) => {
