@@ -4,27 +4,17 @@
 
 esbuild-svelte@^0.5.3:
   version "0.5.4"
-  resolved "https://registry.npmjs.org/esbuild-svelte/-/esbuild-svelte-0.5.4.tgz"
+  resolved "https://registry.yarnpkg.com/esbuild-svelte/-/esbuild-svelte-0.5.4.tgz#8afc4445c89ed1183aa401fd09f0edbe729c6a64"
   integrity sha512-7QgDYfnRW8U/oMo/eaVXr0Ptm/LRugziXMRvg3RGA2MB7dWyc/gYEdf2KThkHeYFFTFAmY7Ujg32gKrmHQE3qw==
   dependencies:
     svelte "^3.42.1"
 
 esbuild@^0.12.14:
-  version "0.12.19"
-  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.12.19.tgz"
-  integrity sha512-5NuT1G6THW7l3fsSCDkcPepn24R0XtyPjKoqKHD8LfhqMXzCdz0mrS9HgO6hIhzVT7zt0T+JGbzCqF5AH8hS9w==
+  version "0.12.22"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.22.tgz#6031a1257b8d0307d306bed673b79c3668607f51"
+  integrity sha512-yWCr9RoFehpqoe/+MwZXJpYOEIt7KOEvNnjIeMZpMSyQt+KCBASM3y7yViiN5dJRphf1wGdUz1+M4rTtWd/ulA==
 
-svelte-cross-unit@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/svelte-cross-unit/-/svelte-cross-unit-0.2.0.tgz#1194569dd7c796d55d5617a2231dc048a76f6232"
-  integrity sha512-60Iiu8rrskEZWFstHdqpmHcBjoDRWAeEaI+nOFhaf6Z/uG7EliiTiE/cLxWmlBdhM2eqovFY62mS64Dk43zs5Q==
-
-svelte@^3.42.1:
-  version "3.42.1"
-  resolved "https://registry.npmjs.org/svelte/-/svelte-3.42.1.tgz"
-  integrity sha512-XtExLd2JAU3T7M2g/DkO3UNj/3n1WdTXrfL63OZ5nZq7nAqd9wQw+lR4Pv/wkVbrWbAIPfLDX47UjFdmnY+YtQ==
-
-svelte@~3.38.2:
-  version "3.38.3"
-  resolved "https://registry.npmjs.org/svelte/-/svelte-3.38.3.tgz"
-  integrity sha512-N7bBZJH0iF24wsalFZF+fVYMUOigaAUQMIcEKHO3jstK/iL8VmP9xE+P0/a76+FkNcWt+TDv2Gx1taUoUscrvw==
+svelte@^3.39.0, svelte@^3.42.1:
+  version "3.42.2"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.42.2.tgz#0246c175c820c1aeca07300c48573a15aae3c1e4"
+  integrity sha512-FOyNYKXb8wdE0Ot+Ctt2/OyDLsNBP8+V6PUE9ag6ZKeLslIou0LnMu1fhtWUA+HjzKTbAM1yj+4PFLtg/3pMJA==

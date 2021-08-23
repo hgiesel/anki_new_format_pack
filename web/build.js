@@ -1,7 +1,6 @@
 const fs = require("fs");
 const esbuild = require("esbuild");
 const sveltePlugin = require("esbuild-svelte");
-const crossUnit = require("svelte-cross-unit");
 
 if (!fs.existsSync("../dist")) {
   fs.mkdirSync("../dist");
@@ -19,10 +18,9 @@ esbuild
     minify: false /* do not set this to true */,
     bundle: true,
     splitting: false,
-    plugins: [
-        sveltePlugin(),
-        crossUnit.esbuildPlugin()
-    ],
+    external: ["svelte"],
+    inject: ["svelte-shim.js"],
+    plugins: [sveltePlugin()],
   })
   .catch((err) => {
     console.error(err);
