@@ -14,11 +14,15 @@
     const getAnchorParent = (predicate) => (currentField) => {
         const selection = currentField.getSelection();
 
-        if (!selection || !selection.anchor) {
+        if (!selection) {
             return null;
         }
 
-        const anchor = selection.anchor;
+        const anchor = selection.anchorNode;
+
+        if (!anchor) {
+            return null;
+        }
 
         let anchorParent = null;
         let element = nodeIsElement(anchor) ? anchor : anchor.parentElement;
@@ -66,7 +70,7 @@
                 <IconButton
                     disabled={!fieldFocused || inCodable}
                     {active}
-                    tooltip="Paragraph {shortcutLabel}"
+                    tooltip="Paragraph ({shortcutLabel})"
                     on:click={(event) => {
                         toggleParagraph();
                         updateState(event);

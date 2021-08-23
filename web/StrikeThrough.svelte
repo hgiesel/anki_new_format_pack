@@ -22,7 +22,7 @@
                 <IconButton
                     disabled={!fieldFocused || inCodable}
                     {active}
-                    tooltip="Strike-through text {shortcutLabel}"
+                    tooltip="Strike-through text ({shortcutLabel})"
                     on:click={(event) => {
                         document.execCommand(key);
                         updateState(event);
