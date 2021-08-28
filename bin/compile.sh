@@ -7,8 +7,7 @@ cp -rf "$DIR/__init__.py" \
   "$DIR/dist"
 
 mkdir -p "$DIR/dist/src"
-find . -wholename './src/*.pyc' -exec rm -f '{}' \;
-find . -wholename './src/*.py'  -exec cp --parents '{}' "$DIR/dist" \;
+rsync -ai --exclude="*.pyc" --exclude=__pycache__ src "$DIR/dist"
 
 yarn --cwd "$DIR/web" build
 
