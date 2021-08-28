@@ -19,7 +19,6 @@ esbuild
     bundle: true,
     splitting: false,
     external: ["svelte"],
-    inject: ["svelte-shim.js"],
     plugins: [sveltePlugin()],
   })
   .catch((err) => {
