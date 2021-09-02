@@ -27,7 +27,7 @@
 </div>
 
 <style lang="scss">
-    @use 'button-mixins' as button;
+    @use 'anki/button-mixins' as button;
 
     div {
         display: none;
