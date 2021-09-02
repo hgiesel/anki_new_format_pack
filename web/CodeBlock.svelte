@@ -20,3 +20,21 @@
         </IconButton>
     </WithContext>
 </WithContext>
+
+<!-- The following serves no purpose but show that SCSS works -->
+<div>
+    <div class="btn-day active" disabled />
+</div>
+
+<style lang="scss">
+    @use 'button-mixins' as button;
+
+    div {
+        display: none;
+        @include button.btn-day;
+
+        div {
+            display: none;
+        }
+    }
+</style>

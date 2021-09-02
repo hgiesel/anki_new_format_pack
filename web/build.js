@@ -1,6 +1,7 @@
 const fs = require("fs");
 const esbuild = require("esbuild");
-const sveltePlugin = require("esbuild-svelte");
+const esbuildSvelte = require("esbuild-svelte");
+const sveltePreprocess = require("svelte-preprocess");
 
 if (!fs.existsSync("../dist")) {
   fs.mkdirSync("../dist");
@@ -19,7 +20,17 @@ esbuild
     bundle: true,
     splitting: false,
     external: ["svelte"],
-    plugins: [sveltePlugin()],
+      plugins: [
+          esbuildSvelte({
+              preprocess: sveltePreprocess({
+                  scss: {
+                      includePaths: [
+                          "../../anki-aside/ts/sass",
+                      ]
+                  },
+              }),
+          }),
+      ],
   })
   .catch((err) => {
     console.error(err);
