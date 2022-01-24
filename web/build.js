@@ -19,13 +19,13 @@ esbuild
     minify: false /* do not set this to true */,
     bundle: true,
     splitting: false,
-    external: ["svelte"],
+    external: ["svelte", "anki"],
       plugins: [
           esbuildSvelte({
               preprocess: sveltePreprocess({
                   scss: {
                       includePaths: [
-                          "../../anki-aside/ts/sass",
+                          "../../anki-main/sass",
                       ]
                   },
               }),
