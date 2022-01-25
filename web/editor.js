@@ -5,11 +5,8 @@ import CodeBlock from "./CodeBlock.svelte";
 import { onNoteEditorMount } from "anki/NoteEditor";
 
 onNoteEditorMount(({ toolbar }) => {
-    toolbar.formatInlineButtons.appendButton(
-        { component: StrikeThrough },
-        2
-    );
-    toolbar.formatBlockButtons.appendButton({ component: Paragraph });
-    toolbar.formatBlockButtons.appendButton({ component: HorizontalRuler });
-    toolbar.formatBlockButtons.appendButton({ component: CodeBlock });
+    toolbar.formatInlineButtons.append({ component: StrikeThrough }, 2);
+    toolbar.formatBlockButtons.append({ component: Paragraph });
+    toolbar.formatBlockButtons.append({ component: HorizontalRuler });
+    toolbar.formatBlockButtons.append({ component: CodeBlock });
 });
