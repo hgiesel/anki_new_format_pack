@@ -37,14 +37,14 @@ if (process.argv[2] === "watch") {
 const options = {
     entryPoints: ["./src/editor.ts"],
     outdir: "../dist/web",
+    format: "iife",
+    target: "es6",
     bundle: true,
     minify: production,
     treeShaking: production,
-    watch,
-    format: "iife",
-    target: "es6",
-    sourcemap: false,
+    sourcemap: !production,
     pure: production ? ["console.log", "console.time", "console.timeEnd"] : [],
+    watch,
     external: ["svelte", "anki"],
     plugins: [
         sveltePlugin({
