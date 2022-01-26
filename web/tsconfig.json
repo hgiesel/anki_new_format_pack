@@ -1,7 +1,6 @@
 {
     "extends": "@tsconfig/svelte/tsconfig.json",
-    "include": ["src/*"],
-    "exclude": ["node_modules/*", "public/*", "anki/*"],
+    "include": ["src/**/*"],
     "compilerOptions": {
         "baseUrl": ".",
         "target": "es6",
