@@ -56,6 +56,10 @@ const options = {
         }),
         sassPlugin(),
     ],
+    loader: {
+        ".png": "dataurl",
+        ".svg": "text",
+    },
 };
 
 build(options).catch((err) => {
