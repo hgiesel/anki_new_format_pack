@@ -1,5 +1,5 @@
 <script lang="ts">
-    import * as NoteEditor from "anki/NoteEditor.svelte";
+    import * as NoteEditor from "anki/NoteEditor";
 
     const {
         IconButton,
@@ -7,7 +7,7 @@
         //@ts-ignore
     } = components;
 
-    function nodeIsElement(node) {
+    function nodeIsElement(node: Node): node is Element {
         return node.nodeType === Node.ELEMENT_NODE;
     }
 

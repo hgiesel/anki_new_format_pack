@@ -1,5 +1,5 @@
 <script lang="ts">
-    import * as NoteEditor from "anki/NoteEditor.svelte";
+    import * as NoteEditor from "anki/NoteEditor";
 
     //@ts-ignore
     const { IconButton } = components;
