@@ -15,23 +15,21 @@ const development = process.env.NODE_ENV === "development";
 
 const watch = development
     ? {
-        onRebuild(error) {
-            if (error) {
-                console.error("esbuild: Watch build failed:", error.getMessage());
-            } else {
-                console.log("esbuild: Watch build succeeded");
-            }
-        }
-    }
+          onRebuild(error) {
+              if (error) {
+                  console.error("esbuild: build failed:", error.getMessage());
+              } else {
+                  console.log("esbuild: build succeeded");
+              }
+          },
+      }
     : false;
 
 /**
  * This should point to all entry points for scripts.
  * Each one will create one js and one css file in `../src/dist/web'
  */
-const entryPoints = [
-    "src/editor.ts",
-];
+const entryPoints = ["src/editor.ts"];
 
 /**
  * Esbuild build options
@@ -69,3 +67,7 @@ build(options).catch((err) => {
     console.error(err);
     process.exit(1);
 });
+
+if (watch) {
+    console.log("Watching for changes...");
+}
