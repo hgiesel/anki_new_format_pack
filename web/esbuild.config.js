@@ -5,7 +5,7 @@ const sveltePlugin = require("esbuild-svelte");
 const sassPlugin = require("esbuild-sass-plugin").default;
 const liveServer = require("live-server");
 
-for (const dir in ["../dist", "../dist/web"]) {
+for (const dir of ["../dist", "../dist/web"]) {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir);
     }
