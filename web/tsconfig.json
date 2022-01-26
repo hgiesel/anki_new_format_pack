@@ -2,15 +2,12 @@
     "extends": "@tsconfig/svelte/tsconfig.json",
     "include": ["src/**/*"],
     "compilerOptions": {
-        "baseUrl": ".",
         "target": "es6",
         "strict": true,
         // Svelte template variables, e.g. on:event or @const, cannot be typed yet
         "noImplicitAny": false,
         "esModuleInterop": true,
-        "paths": {
-            "@anki/*": ["./anki/*"]
-        },
-        "typeRoots": ["./node_modules/@types", "./anki/ts/typings"]
+        "baseUrl": "./src",
+        "typeRoots": ["./node_modules/@types", "./typings"]
     }
 }
