@@ -1,8 +1,15 @@
+const fs = require('fs')
 const { build } = require('esbuild')
 const sveltePreprocess = require('svelte-preprocess')
 const sveltePlugin = require('esbuild-svelte')
 const sassPlugin = require('esbuild-sass-plugin').default
 const liveServer = require('live-server')
+
+for (const dir in ["../dist", "../dist/web"]) {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
+}
 
 const production = process.env.NODE_ENV === "production";
 
@@ -40,7 +47,15 @@ const options = {
     legalComments: 'none',
     external: ["svelte", "anki"],
     plugins: [
-        sveltePlugin({ preprocess: sveltePreprocess() }),
+        sveltePlugin({
+            preprocess: sveltePreprocess({
+                scss: {
+                    includePaths: [
+                        "anki/sass",
+                    ]
+                },
+            }),
+        }),
         sassPlugin()
     ]
 }
