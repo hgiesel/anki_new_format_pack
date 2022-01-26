@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
     import { context } from "anki/NoteEditor";
 
+    const a: number = "adf";
     const {
         IconButton,
         WithState,

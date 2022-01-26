@@ -1,15 +1,24 @@
 {
-  "main": "build.js",
+  "name": "anki-new-format-pack",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "node build.js"
+    "build": "node ./esbuild.config.js",
+    "dev": "node ./esbuild.config.js",
+    "lint": "svelte-check --tsconfig ./tsconfig.json --workspace ./src && prettier --config .prettierrc --plugin-search-dir=. --write ./src"
   },
-  "dependencies": {
-    "bootstrap": "^5.1.0",
-    "esbuild": "^0.12.14",
-    "esbuild-svelte": "^0.5.3",
-    "sass": "^1.39.0",
-    "svelte": "^3.39.0",
-    "svelte-preprocess": "^4.8.0"
-  },
-  "private": true
+  "devDependencies": {
+    "@tsconfig/svelte": "^2.0.1",
+    "esbuild": "^0.13.7",
+    "esbuild-sass-plugin": "^2.2.1",
+    "esbuild-svelte": "^0.5.6",
+    "live-server": "^1.2.1",
+    "sass": "^1.49.0",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.4.0",
+    "svelte": "^3.43.2",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "typescript": "^4.4.4"
+  }
 }

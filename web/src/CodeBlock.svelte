@@ -1,5 +1,5 @@
-<script>
-    import { context } from "anki/NoteEditor";
+<script lang="ts">
+    import { context } from "anki/NoteEditor.svelte";
 
     const { focusedInput }  = context.get();
     const { IconButton } = components;
