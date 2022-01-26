@@ -1,12 +1,12 @@
 <script>
-    import { getNoteEditor } from "anki/NoteEditor";
+    import { context } from "anki/NoteEditor";
 
     const {
         IconButton,
         WithState,
     } = components;
 
-    const { focusedInput }  = getNoteEditor();
+    const { focusedInput }  = context.get();
     const key = "strikeThrough";
 
     $: disabled = $focusedInput?.name !== "rich-text";

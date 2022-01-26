@@ -1,5 +1,5 @@
 <script>
-    import { getNoteEditor } from "anki/NoteEditor";
+    import { context } from "anki/NoteEditor";
 
     const {
         IconButton,
@@ -55,7 +55,7 @@
     }
 
     const key = "paragraph";
-    const { focusedInput }  = getNoteEditor();
+    const { focusedInput }  = context.get();
 
     $: disabled = $focusedInput?.name !== "rich-text";
 </script>

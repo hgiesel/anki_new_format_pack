@@ -1,7 +1,7 @@
 <script>
-    import { getNoteEditor } from "anki/NoteEditor";
+    import { context } from "anki/NoteEditor";
 
-    const { focusedInput }  = getNoteEditor();
+    const { focusedInput }  = context.get();
     const { IconButton } = components;
 
     $: disabled = $focusedInput?.name !== "rich-text";
