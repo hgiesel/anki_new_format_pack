@@ -9,6 +9,6 @@
         "paths": {
             "@anki/*": ["./anki/*"]
         },
-        "typeRoots": ["./node_modules/@types", "../../anki-aside/ts/typings"]
+        "typeRoots": ["./node_modules/@types", "./anki/ts/typings"]
     }
 }
