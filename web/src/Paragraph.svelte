@@ -11,36 +11,39 @@
         return node.nodeType === Node.ELEMENT_NODE;
     }
 
-    const getAnchorParent = (predicate) => (currentField) => {
-        const selection = currentField.getSelection();
+    const getAnchorParent =
+        <T extends HTMLElement>(predicate: (element: Element) => element is T) =>
+        (currentField: ShadowRoot): T | null => {
+            const selection = currentField.getSelection();
 
-        if (!selection) {
-            return null;
-        }
+            if (!selection) {
+                return null;
+            }
 
-        const anchor = selection.anchorNode;
+            const anchor = selection.anchorNode;
 
-        if (!anchor) {
-            return null;
-        }
+            if (!anchor) {
+                return null;
+            }
 
-        let anchorParent = null;
-        let element = nodeIsElement(anchor) ? anchor : anchor.parentElement;
+            let anchorParent: T | null = null;
+            let element = nodeIsElement(anchor) ? anchor : anchor.parentElement;
 
-        while (element) {
-            anchorParent = anchorParent || (predicate(element) ? element : null);
-            element = element.parentElement;
-        }
+            while (element) {
+                anchorParent = anchorParent || (predicate(element) ? element : null);
+                element = element.parentElement;
+            }
 
-        return anchorParent;
-    };
+            return anchorParent;
+        };
 
-    const isParagraph = (element) => element.tagName === "P";
-    const getParagraph = getAnchorParent(isParagraph);
+    const isParagraph = (element: Element): element is HTMLParamElement =>
+        element.tagName === "P";
+    const getParagraph = getAnchorParent<HTMLParamElement>(isParagraph);
 
     function toggleParagraph() {
-        const currentField = document.activeElement;
-        const paragraph = getParagraph(currentField.shadowRoot);
+        const currentField = document.activeElement!;
+        const paragraph = getParagraph(currentField.shadowRoot!);
 
         if (!paragraph) {
             document.execCommand("formatBlock", false, "p");
@@ -51,8 +54,8 @@
     }
 
     function checkForParagraph() {
-        const currentField = document.activeElement;
-        return Boolean(getParagraph(currentField.shadowRoot));
+        const currentField = document.activeElement!;
+        return Boolean(getParagraph(currentField.shadowRoot!));
     }
 
     const key = "paragraph";
