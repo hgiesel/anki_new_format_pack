@@ -1,10 +1,10 @@
 <script lang="ts">
-    import { context } from "anki/NoteEditor";
+    import * as NoteEditor from "anki/NoteEditor.svelte";
 
-    const a: number = "adf";
     const {
         IconButton,
         WithState,
+        //@ts-ignore
     } = components;
 
     function nodeIsElement(node) {
@@ -56,7 +56,7 @@
     }
 
     const key = "paragraph";
-    const { focusedInput }  = context.get();
+    const { focusedInput }  = NoteEditor.context.get();
 
     $: disabled = $focusedInput?.name !== "rich-text";
 </script>

@@ -2,6 +2,7 @@
     import { context } from "anki/NoteEditor.svelte";
 
     const { focusedInput }  = context.get();
+    //@ts-ignore
     const { IconButton } = components;
 
     $: disabled = $focusedInput?.name !== "rich-text";

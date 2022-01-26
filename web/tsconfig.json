@@ -1,17 +1,14 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
-  "exclude": ["node_modules/*", "public/*"],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "target": "es6",
-    "strict": true,
-    "esModuleInterop": true,
-    "paths": {
-      "@anki/*": ["./anki/*"]
-    },
-    "typeRoots": [
-      "./node_modules/@types",
-      "../../anki-aside/ts/typings",
-    ]
-  }
+    "extends": "@tsconfig/svelte/tsconfig.json",
+    "exclude": ["node_modules/*", "public/*"],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es6",
+        "strict": true,
+        "esModuleInterop": true,
+        "paths": {
+            "@anki/*": ["./anki/*"]
+        },
+        "typeRoots": ["./node_modules/@types", "../../anki-aside/ts/typings"]
+    }
 }

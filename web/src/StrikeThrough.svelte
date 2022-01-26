@@ -1,12 +1,13 @@
 <script lang="ts">
-    import { context } from "anki/NoteEditor";
+    import * as NoteEditor from "anki/NoteEditor.svelte";
 
     const {
         IconButton,
         WithState,
+    //@ts-ignore
     } = components;
 
-    const { focusedInput }  = context.get();
+    const { focusedInput } = NoteEditor.context.get();
     const key = "strikeThrough";
 
     $: disabled = $focusedInput?.name !== "rich-text";
