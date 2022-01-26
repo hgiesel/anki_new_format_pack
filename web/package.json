@@ -5,8 +5,8 @@
     "scripts": {
         "build": "cross-env NODE_ENV=production node ./esbuild.config.js",
         "dev": "cross-env NODE_ENV=development node ./esbuild.config.js",
-        "lint": "svelte-check --tsconfig ./tsconfig.json --workspace ./src",
-        "format": "prettier --config .prettierrc --write ./src"
+        "lint": "svelte-check --workspace ./src --tsconfig ../tsconfig.json",
+        "format": "prettier --write ."
     },
     "devDependencies": {
         "@tsconfig/svelte": "^2.0.1",

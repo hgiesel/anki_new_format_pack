@@ -1,10 +1,13 @@
 {
     "extends": "@tsconfig/svelte/tsconfig.json",
-    "exclude": ["node_modules/*", "public/*"],
+    "include": ["src/*"],
+    "exclude": ["node_modules/*", "public/*", "anki/*"],
     "compilerOptions": {
         "baseUrl": ".",
         "target": "es6",
         "strict": true,
+        // Svelte template variables, e.g. on:event or @const, cannot be typed yet
+        "noImplicitAny": false,
         "esModuleInterop": true,
         "paths": {
             "@anki/*": ["./anki/*"]
