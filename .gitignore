@@ -3,3 +3,4 @@ __pycache__
 meta.json
 *ankiaddon
 node_modules
+yarn-error.log
