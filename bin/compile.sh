@@ -1,14 +1,10 @@
 declare DIR="$(cd "$(dirname "$0")/.." && pwd -P)"
 
-rm -rf "$DIR/dist/*"
-
-cp -rf "$DIR/__init__.py" \
-  "$DIR/manifest.json" \
-  "$DIR/dist"
+git clean -fd "$DIR/dist"
 
 mkdir -p "$DIR/dist/src"
-rsync -ai --exclude="*.pyc" --exclude=__pycache__ src "$DIR/dist"
+rsync -ai --exclude='*.pyc' --exclude=__pycache__ 'src' "$DIR/dist"
 
-yarn --cwd "$DIR/web" build
+yarn --cwd "$DIR/ts" && yarn --cwd "$DIR/ts" build
 
 echo 'Was successfully compiled!'
