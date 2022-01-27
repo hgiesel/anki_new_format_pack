@@ -16,10 +16,16 @@ const development = process.env.NODE_ENV === "development";
 const watch = development
     ? {
           onRebuild(error) {
+              console.timeLog;
+
               if (error) {
-                  console.error("esbuild: build failed:", error.getMessage());
+                  console.error(
+                      new Date(),
+                      "esbuild: build failed:",
+                      error.getMessage(),
+                  );
               } else {
-                  console.log("esbuild: build succeeded");
+                  console.log(new Date(), "esbuild: build succeeded");
               }
           },
       }

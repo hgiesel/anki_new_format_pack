@@ -1,4 +1,4 @@
-import "./fields-grid.css";
+import "./styles/fields-grid.scss";
 
 import StrikeThrough from "./StrikeThrough.svelte";
 import Paragraph from "./Paragraph.svelte";
