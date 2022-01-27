@@ -7,7 +7,6 @@
         // Svelte template variables, e.g. on:event or @const, cannot be typed yet
         "noImplicitAny": false,
         "esModuleInterop": true,
-        "baseUrl": "./src",
         "typeRoots": ["./node_modules/@types", "../anki/ts/typings"]
     }
 }
