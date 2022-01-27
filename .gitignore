@@ -7,6 +7,7 @@ meta.json
 
 # Python
 __pycache__
+*.pyc
 
 # NPM / Typescript 
 node_modules
