@@ -1,6 +1,6 @@
 <script lang="ts">
+    import { bracesIcon } from "./assets/icons";
     import * as NoteEditor from "anki/NoteEditor";
-    import bracesIcon from "../public/braces.svg";
 
     const { focusedInput } = NoteEditor.context.get();
     //@ts-ignore

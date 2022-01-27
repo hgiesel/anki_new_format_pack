@@ -1,5 +1,5 @@
 <script lang="ts">
-    import hrIcon from "../public/hr.svg";
+    import { hrIcon } from "./assets/icons";
     import * as NoteEditor from "anki/NoteEditor";
 
     //@ts-ignore

@@ -8,6 +8,6 @@
         "noImplicitAny": false,
         "esModuleInterop": true,
         "baseUrl": "./src",
-        "typeRoots": ["./node_modules/@types", "./typings"]
+        "typeRoots": ["./node_modules/@types", "../anki/ts/typings"]
     }
 }

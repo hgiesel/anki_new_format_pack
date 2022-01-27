@@ -1,5 +1,5 @@
 <script lang="ts">
-    import strikeThroughIcon from "../public/strike-through.svg";
+    import { strikeThroughIcon } from "./assets/icons";
     import * as NoteEditor from "anki/NoteEditor";
 
     const {
