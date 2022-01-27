@@ -1,6 +1,13 @@
-__pycache__
+# General
 .DS_Store
+
+# Anki
 meta.json
-*ankiaddon
+*.ankiaddon
+
+# Python
+__pycache__
+
+# NPM / Typescript 
 node_modules
 yarn-error.log
