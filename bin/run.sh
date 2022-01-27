@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 declare DIR="$(cd "$(dirname "$0")/.." && pwd -P)"
 
+"$DIR/bin/compile.sh"
+
 cd "$DIR";
 git submodule update --init
 cd "$DIR/anki";
