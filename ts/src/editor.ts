@@ -1,3 +1,5 @@
+import "./fields-grid.css";
+
 import StrikeThrough from "./StrikeThrough.svelte";
 import Paragraph from "./Paragraph.svelte";
 import HorizontalRuler from "./HorizontalRuler.svelte";

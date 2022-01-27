@@ -1,0 +1,4 @@
+.fields {
+    /* This targets editor/Fields.svelte in the Anki repo */
+    grid-template-columns: 1fr 1fr;
+}
