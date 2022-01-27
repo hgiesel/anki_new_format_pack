@@ -1,5 +1,5 @@
 from .webview import init_webview
 
-# This is the entry point to the Python component
+# This function is the entry point to the Python code
 def init():
     init_webview()
