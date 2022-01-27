@@ -1,5 +1,6 @@
 # General
 .DS_Store
+build
 
 # Anki
 meta.json

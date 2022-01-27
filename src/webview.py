@@ -12,6 +12,7 @@ def load_package(webcontent, context):
         base_path = f"/_addons/{addon_package}/web"
 
         webcontent.js.append(f"{base_path}/editor.js")
+        webcontent.css.append(f"{base_path}/editor.css")
 
 
 def init_webview():

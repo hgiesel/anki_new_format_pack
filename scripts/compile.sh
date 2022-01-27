@@ -2,7 +2,7 @@
 declare DIR="$(cd "$(dirname "$0")/.." && pwd -P)"
 set -e
 
-git clean -fd "$DIR/dist"
+git clean -fdx "$DIR/dist"
 
 # Typescript
 yarn --cwd "$DIR/ts" && yarn --cwd "$DIR/ts" build
