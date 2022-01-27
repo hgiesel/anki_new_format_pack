@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 declare DIR="$(cd "$(dirname "$0")/.." && pwd -P)"
 mkdir -p "$DIR/build"
 
@@ -9,10 +10,9 @@ else
   declare addon_id='new_format_pack'
 fi
 
-"$DIR/bin/compile.sh"
+"$DIR/scripts/compile.sh"
 
 cd "$DIR/dist"
-
 rm -rf ./**"/__pycache__"
 
 zip -r "$DIR/build/$addon_id.ankiaddon" *
