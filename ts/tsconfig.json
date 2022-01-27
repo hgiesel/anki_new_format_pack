@@ -8,6 +8,6 @@
         "noImplicitAny": false,
         "esModuleInterop": true,
         "skipLibCheck": true,
-        "typeRoots": ["node_modules/@types", "anki/ts/typings"]
+        "typeRoots": ["./node_modules/@types", "./anki/ts/typings"]
     }
 }

@@ -1,5 +1,4 @@
 <script lang="ts">
-    /// <reference types="./shadow-dom" />
     import { paragraphIcon } from "./assets/icons";
     import * as NoteEditor from "anki/NoteEditor";
 
