@@ -5,7 +5,7 @@ set -e
 "$DIR/scripts/compile.sh"
 
 cd "$DIR";
-git submodule update --init
+git submodule init
 
 cd "$DIR/anki";
 ANKI_BASE="$DIR/ankidata" "$DIR/anki/scripts/ts-run"

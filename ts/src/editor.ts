@@ -19,12 +19,24 @@ import * as NoteEditor from "anki/NoteEditor";
  * ```
  *
  * This means that you also dynamically import packages exported from Anki:
- * TODO
  */
+//@ts-ignore
+import { hasPackages, listPackages, require } from "anki/packages";
+
+if (hasPackages("anki/NoteEditor")) {
+    const OtherNoteEditor = require("anki/NoteEditor");
+
+    /**
+     * This can be useful if you're not sure if the current Anki webview exposes this package.
+     * That way you can make sure that you only execute some functionality if the package exists.
+     */
+    console.log("Those two packages are the same: ", NoteEditor === OtherNoteEditor);
+    console.log("Other packages: ", listPackages());
+}
 
 /**
- * You can use imports prefixed with `@anki' to import types directly
- * from the Anki source. This can be helpful for typing callbacks (see below).
+ * You can import types from Anki repo directly, if you prefix them with `@anki'.
+ * This can be helpful for typing callbacks (see below).
  *
  * Disclaimers:
  * 1. Do no try to import anything but types in this manner! It will not work.
