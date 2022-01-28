@@ -10,4 +10,4 @@ yarn --cwd "$DIR/ts" && yarn --cwd "$DIR/ts" build
 # Python
 rsync -rai "$DIR/src" "$DIR/dist" --filter=":- $DIR/.gitignore" --delete-after
 
-echo 'Was successfully compiled!'
+echo 'Was successfully built!'

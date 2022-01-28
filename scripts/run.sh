@@ -2,7 +2,7 @@
 declare DIR="$(cd "$(dirname "$0")/.." && pwd -P)"
 set -e
 
-"$DIR/scripts/compile.sh"
+"$DIR/scripts/build.sh"
 
 cd "$DIR";
 git submodule init

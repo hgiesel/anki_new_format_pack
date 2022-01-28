@@ -4,7 +4,7 @@ set -e
 
 mkdir -p "$DIR/build"
 
-"$DIR/scripts/compile.sh"
+"$DIR/scripts/build.sh"
 
 cd "$DIR/dist"
 
