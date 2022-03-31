@@ -35,14 +35,8 @@ import * as NoteEditor from "anki/NoteEditor";
 import type { NoteEditorAPI } from "@anki/editor/NoteEditor.svelte";
 
 NoteEditor.lifecycle.onMount(({ toolbar }: NoteEditorAPI): void => {
-    toolbar.formatInlineButtons.append(
-        { component: StrikeThrough, id: "strikeThroughButton" },
-        2,
-    );
-    toolbar.formatBlockButtons.append({ component: Paragraph, id: "paragraphButton" });
-    toolbar.formatBlockButtons.append({
-        component: HorizontalRuler,
-        id: "horizontalRulerButton",
-    });
-    toolbar.formatBlockButtons.append({ component: CodeBlock, id: "codeBlockButton" });
+    toolbar.inlineButtons.append({ component: StrikeThrough, id: "strikeThroughButton" }, 2);
+    toolbar.blockButtons.append({ component: Paragraph, id: "paragraphButton" });
+    toolbar.blockButtons.append({ component: HorizontalRuler, id: "horizontalRulerButton" });
+    toolbar.blockButtons.append({ component: CodeBlock, id: "codeBlockButton" });
 });
