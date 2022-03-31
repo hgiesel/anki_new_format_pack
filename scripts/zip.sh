@@ -2,10 +2,10 @@
 declare DIR="$(cd "$(dirname "$0")/.." && pwd -P)"
 set -e
 
-mkdir -p "$DIR/build"
+mkdir -p "$DIR/zipped"
 
-"$DIR/scripts/build.sh"
+"$DIR/tools/build.sh"
 
 cd "$DIR/dist"
 
-zip -r "$DIR/build/addon.ankiaddon" *
+zip -r "$DIR/zipped/addon.ankiaddon" *

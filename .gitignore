@@ -1,6 +1,6 @@
 # General
 .DS_Store
-build
+zipped
 
 # Anki
 meta.json
