@@ -35,6 +35,36 @@ Contains the Typescript and Svelte files which are used for Anki webviews.
 
 A submodule pointing to `ankitects/anki`.
 
+This can be used for (very) limited typechecking/IDE support, as this area
+is still a work in progress. To set up:
+
+    cd anki && git submodule update
+
+Read the docs/development.md file, and ensure you have the necessary dependencies (particular Bazel). Then
+build the ts portions of Anki, which will take some time:
+
+    bazel build ts/...
+
+If the build completes successfully, you can then open the ../ts folder with VSCode.
+
+Only a few explicit types can be imported at the moment. For example, this line
+imports an object at runtime, and is not typed, and will show an error in the
+editor (but will build):
+
+    import * as NoteEditor from "anki/NoteEditor";
+
+This line imports a type however:
+
+    import type { NoteEditorAPI } from "@anki/editor/NoteEditor.svelte";
+
+You can then tell the editor that a variable is that type, to be able to get code completion
+on it:
+
+    NoteEditor.lifecycle.onMount(({ toolbar }: NoteEditorAPI): void => {
+        toolbar.inlineButtons.append({ component: StrikeThrough }, 2);
+
+Typing 'toolbar.' will show the various available toolbar categories.
+
 ### `ankidata/`
 
 When invoking Anki through `scripts/run`, it will be started with `$ANKI_BASE` pointing to this directory.
