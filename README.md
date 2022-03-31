@@ -67,8 +67,8 @@ is still a work in progress. To set up:
 cd anki && git submodule update
 ```
 
-Read the [anki/docs/development.md](anki/docs/development.md) file, and ensure
-you have the necessary dependencies (particular Bazel).
+Read the [anki/docs/development.md](https://github.com/ankitects/anki/blob/main/docs/development.md) file, and ensure
+you have the necessary dependencies (particularly Bazel).
 Then build the ts portions of Anki, which will take some time:
 
 ```sh
