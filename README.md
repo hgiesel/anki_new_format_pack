@@ -14,15 +14,18 @@ You'll need node and yarn installed.
 
 ## Tools
 
-- Build with `tools/build.sh`. This makes a release build, so console.log lines are stripped out.
+- Build with `tools/build.sh`. This makes a release build, so `console.log` lines are stripped out.
 - Develop by changing your directory to `/ts`, and running `yarn run dev`. This ensures
   that any changes you make in `/ts` are immediately compiled to `/dist/web`.
 - Zip built output with `bin/zip.sh`. Will be put into `zipped/`. This file can be uploaded to [Ankiweb](https://ankiweb.net/shared/addons/2.1).
 
 ## Develop
 
-Built output will be put into `dist/`. This folder can be linked into your Anki add-on folder,
-e.g. `ln -sf "$(pwd)/dist" ~/Library/Application\ Support/Anki2/addons21/myaddon`.
+Built output will be put into `dist/`. This directory can be linked into your Anki add-on folder,
+e.g.
+```sh
+ln -sf "$(pwd)/dist" ~/Library/Application\ Support/Anki2/addons21/myaddon
+```
 
 ### Develop with Anki submodule
 
