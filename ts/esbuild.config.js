@@ -32,7 +32,7 @@ const watch = development
     : false;
 
 /**
- * This should point to all entry points for scripts.
+ * This should point to all entry points for JS add-ons.
  * Each one will create one js and one css file in `../src/dist/web'
  */
 const entryPoints = ["src/editor.ts"];
