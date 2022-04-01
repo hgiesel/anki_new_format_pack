@@ -7,7 +7,6 @@ Adds four buttons:
 - Code block
 - Paragraph
 
-
 ## Requirements
 
 You'll need node and yarn installed.
@@ -23,6 +22,7 @@ You'll need node and yarn installed.
 
 Built output will be put into `dist/`. This directory can be linked into your Anki add-on folder,
 e.g.
+
 ```sh
 ln -sf "$(pwd)/dist" ~/Library/Application\ Support/Anki2/addons21/myaddon
 ```
@@ -32,6 +32,7 @@ ln -sf "$(pwd)/dist" ~/Library/Application\ Support/Anki2/addons21/myaddon
 Alternatively, you can also use the anki submodule for development.
 
 Advantages include:
+
 - Add-on development does not interfere with your personal Anki installation.
 - Add-ons do not interfere with each other. Of course you can still install other
   add-ons in this installation, if you want to check compatibilities.
@@ -40,7 +41,10 @@ Advantages include:
 - You can prepare PRs along with developing your add-on, e.g. new hooks.
 
 Disadvantages include:
-- You need to to be able to compile/run Anki from source.
+
+- You need to to be able to compile/run Anki from source. This requires installing
+  some dependencies - please see the docs linked in the `anki/` section below before
+  proceeding.
 
 If you decide to use the anki submodule, you can run it with `tools/run.sh` or
 `tools/dev.sh`, which combines `/anki/tools/ts-run` + `/anki/tools/ts-watch` + `yarn run dev`
@@ -96,7 +100,7 @@ on it:
 
 ```typescript
 NoteEditor.lifecycle.onMount(({ toolbar }: NoteEditorAPI): void => {
-    toolbar.inlineButtons.append({ component: StrikeThrough }, 2);
+  toolbar.inlineButtons.append({ component: StrikeThrough }, 2);
 });
 ```
 
