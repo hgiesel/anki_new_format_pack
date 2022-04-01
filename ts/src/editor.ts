@@ -1,3 +1,6 @@
+// https://github.com/ankitects/anki/issues/1386
+/// <reference path="../../anki/ts/lib/shadow-dom.d.ts" />
+
 import "./styles/fields-grid.scss";
 
 import StrikeThrough from "./StrikeThrough.svelte";
