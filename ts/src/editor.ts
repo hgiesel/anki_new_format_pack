@@ -28,8 +28,8 @@ import * as NoteEditor from "anki/NoteEditor";
  *
  * Disclaimers:
  * 1. Do no try to import anything but types in this manner! It will not work.
- * 2. Types have less guarantee to stay unchanged a/o be moved to other files.
- *    This will not break you build however, as esbuild does depend on Typescript
+ * 2. Types have less guarantee to stay unchanged and/or be moved to other files.
+ *    This will not break you build however, as esbuild does not depend on Typescript
  *    types for a build to succeed.
  */
 import type { NoteEditorAPI } from "@anki/editor/NoteEditor.svelte";
