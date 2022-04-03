@@ -1,12 +1,8 @@
 <script lang="ts">
     import { paragraphIcon } from "./assets/icons";
-    import * as NoteEditor from "anki/NoteEditor";
-
-    const {
-        IconButton,
-        WithState,
-        //@ts-ignore
-    } = components;
+    import anki from "anki/runtime";
+    const { focusedInput } = anki.editor.context.get();
+    const { IconButton, WithState } = anki.components;
 
     function nodeIsElement(node: Node): node is Element {
         return node.nodeType === Node.ELEMENT_NODE;
@@ -60,7 +56,6 @@
     }
 
     const key = "paragraph";
-    const { focusedInput } = NoteEditor.context.get();
 
     $: disabled = $focusedInput?.name !== "rich-text";
 </script>

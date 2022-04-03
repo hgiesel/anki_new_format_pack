@@ -12,7 +12,7 @@
         "typeRoots": ["node_modules/@types"],
         "paths": {
             /* This alias should only be used for typing needs */
-            "@anki/*": ["../anki/.bazel/bin/ts/*", "../anki/ts/*"]
+            "anki/*": ["./anki-dts/*"]
         }
     }
 }

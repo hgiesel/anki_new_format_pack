@@ -1,10 +1,8 @@
 <script lang="ts">
     import { bracesIcon } from "./assets/icons";
-    import * as NoteEditor from "anki/NoteEditor";
-
-    const { focusedInput } = NoteEditor.context.get();
-    //@ts-ignore
-    const { IconButton } = components;
+    import anki from "anki/runtime";
+    const { focusedInput } = anki.editor.context.get();
+    const { IconButton } = anki.components;
 
     $: disabled = $focusedInput?.name !== "rich-text";
 </script>

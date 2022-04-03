@@ -1,10 +1,8 @@
 <script lang="ts">
     import { hrIcon } from "./assets/icons";
-    import * as NoteEditor from "anki/NoteEditor";
-
-    //@ts-ignore
-    const { IconButton } = components;
-    const { focusedInput } = NoteEditor.context.get();
+    import anki from "anki/runtime";
+    const { focusedInput } = anki.editor.context.get();
+    const { IconButton } = anki.components;
 
     $: disabled = $focusedInput?.name !== "rich-text";
 </script>
