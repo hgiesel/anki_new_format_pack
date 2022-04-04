@@ -11,7 +11,7 @@
 
 <WithState
     {key}
-    update={() => document.queryCommandState(key)}
+    update={() => Promise.resolve(document.queryCommandState(key))}
     let:state={active}
     let:updateState
 >

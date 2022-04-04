@@ -50,9 +50,9 @@
         }
     }
 
-    function checkForParagraph() {
+    function checkForParagraph(): Promise<boolean> {
         const currentField = document.activeElement!;
-        return Boolean(getParagraph(currentField.shadowRoot!));
+        return Promise.resolve(Boolean(getParagraph(currentField.shadowRoot!)));
     }
 
     const key = "paragraph";
