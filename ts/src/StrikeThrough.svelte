@@ -1,14 +1,9 @@
 <script lang="ts">
     import { strikeThroughIcon } from "./assets/icons";
-    import * as NoteEditor from "anki/NoteEditor";
+    import { editor, components } from "anki/runtime";
+    const { focusedInput } = editor.context.get();
+    const { IconButton, WithState } = components;
 
-    const {
-        IconButton,
-        WithState,
-        //@ts-ignore
-    } = components;
-
-    const { focusedInput } = NoteEditor.context.get();
     const key = "strikeThrough";
 
     $: disabled = $focusedInput?.name !== "rich-text";
@@ -16,7 +11,7 @@
 
 <WithState
     {key}
-    update={() => document.queryCommandState(key)}
+    update={() => Promise.resolve(document.queryCommandState(key))}
     let:state={active}
     let:updateState
 >

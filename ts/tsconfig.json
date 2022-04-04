@@ -8,11 +8,11 @@
         "noImplicitAny": false,
         "isolatedModules": true,
         "esModuleInterop": true,
-        "skipLibCheck": true,
-        "typeRoots": ["node_modules/@types", "../anki/ts/typings"],
+        "skipLibCheck": false,
+        "typeRoots": ["node_modules/@types"],
         "paths": {
             /* This alias should only be used for typing needs */
-            "@anki/*": ["../anki/ts/*"]
+            "anki/*": ["./anki-dts/*"]
         }
     }
 }
