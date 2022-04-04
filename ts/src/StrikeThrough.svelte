@@ -1,8 +1,8 @@
 <script lang="ts">
     import { strikeThroughIcon } from "./assets/icons";
-    import anki from "anki/runtime";
-    const { focusedInput } = anki.editor.context.get();
-    const { IconButton, WithState } = anki.components;
+    import { editor, components } from "anki/runtime";
+    const { focusedInput } = editor.context.get();
+    const { IconButton, WithState } = components;
 
     const key = "strikeThrough";
 

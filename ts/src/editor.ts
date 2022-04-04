@@ -8,8 +8,7 @@ import Paragraph from "./Paragraph.svelte";
 import HorizontalRuler from "./HorizontalRuler.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 
-import anki from "anki/runtime";
-const editor = anki.editor;
+import { editor } from "anki/runtime";
 
 editor.lifecycle.onMount((editor): void => {
     // editor.focusedField. etc...
