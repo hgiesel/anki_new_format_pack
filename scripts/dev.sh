@@ -10,9 +10,9 @@ git submodule init
 cd "$DIR/anki"
 (
   # Start Anki
-  ANKI_BASE="$DIR/ankidata" "$DIR/anki/scripts/ts-run" &
+  ANKI_BASE="$DIR/ankidata" "$DIR/anki/tools/ts-run" &
   # Watch for changes in Anki TypeScript code
-  "$DIR/anki/scripts/ts-watch" &
+  "$DIR/anki/tools/ts-watch" &
   # Watch for changes in Add-on TypeScript code
   yarn --cwd "$DIR/ts" dev
 )

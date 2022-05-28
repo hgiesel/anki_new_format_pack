@@ -8,4 +8,4 @@ cd "$DIR";
 git submodule init
 
 cd "$DIR/anki";
-ANKI_BASE="$DIR/ankidata" "$DIR/anki/scripts/ts-run"
+ANKI_BASE="$DIR/ankidata" "$DIR/anki/tools/ts-run"
